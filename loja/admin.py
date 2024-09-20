@@ -12,3 +12,5 @@ class ProdutoAdmin(admin.ModelAdmin):
 admin.site.register(Fabricante,FabricanteAdmin) #adiciona a interface do adm
 admin.site.register(Produto, ProdutoAdmin)
 admin.site.register(Categoria)
+#incluir a tabela de usuário no final
+admin.site.register(Usuario)
