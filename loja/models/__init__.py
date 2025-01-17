@@ -9,3 +9,5 @@ from .Produto import Produto
 # inclua o modelo de usuário
 PERFIL = ((1, 'Admin'),(2, 'Usuario'))
 from .Usuario import Usuario
+from .Carrinho import Carrinho
+from .Carrinho import CarrinhoItem
