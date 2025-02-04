@@ -4,6 +4,21 @@ body{
     #content form{
     margin-top: calc(50vh, 241px);
     }
-    #content form button{
-    width: 100%;
-    }
+    /*#content form button{
+    width: 50%;
+    margin: 0 auto;
+    }*/
+
+.alterar_quant{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap:1em;
+}
+.botoes_quant{
+    background:none;
+    border:none;
+}
+.row{
+    margin-bottom: 1em;
+}

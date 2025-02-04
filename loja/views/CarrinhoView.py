@@ -102,3 +102,20 @@ def remover_item_view(request, item_id):
     if carrinho_id == item.carrinho.id:
         item.delete()
     return redirect('/carrinho')
+
+from django.shortcuts import get_object_or_404, redirect
+from django.views.decorators.http import require_POST
+from loja.models import CarrinhoItem
+
+@require_POST
+def atualizar_quantidade(request, item_id):
+    item = get_object_or_404(CarrinhoItem, id=item_id)
+    acao = request.POST.get('acao')
+
+    if acao == 'aumentar':
+        item.quantidade += 1
+    elif acao == 'diminuir' and item.quantidade > 1:
+        item.quantidade -= 1
+    
+    item.save()
+    return redirect('/carrinho')
